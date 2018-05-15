@@ -10,7 +10,7 @@ def workFucnt1(path_to_file, file_name):
 
     working_file.write("Start Working Function")
 
-    for number in range(1000):
+    for number in range(100000):
         working_file.write("\nFor loop {} entry".format(number))
 
     working_file.write('\nEnding working Function')
@@ -19,7 +19,10 @@ def workFucnt1(path_to_file, file_name):
 
     return
 
+# un-comment this line below to see the process block touch
 # workFucnt1(path_to_file, file_name)
 
+# un-comment the bottom two lines to see the process
+# execute without blocking Touch
 myThread            = threading.Thread(target=workFucnt1, args=(path_to_file, file_name,))
 myThread.start()

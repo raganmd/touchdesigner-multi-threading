@@ -34,7 +34,10 @@ def workFucnt1(path_to_file, file_name, myQ):
 
 frameStart.par.framestart = 1
 
+# un-comment this line below to see the process block touch
 # workFucnt1(path_to_file, file_name, myQ)
 
+# un-comment the bottom two lines to see the process
+# execute without blocking Touch
 myThread            = threading.Thread(target=workFucnt1, args=(path_to_file, file_name, myQ,))
 myThread.start()
